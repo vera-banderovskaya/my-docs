@@ -1,0 +1,29 @@
+name: Deploy Documentation
+on:
+  push:
+    branches: [ main ]  # Запуск при пуше в main
+  pull_request:         # Опционально: проверка в PR
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Шаг 1: Загрузка кода
+      - uses: actions/checkout@v2
+
+      # Шаг 2: Установка Python и MkDocs
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      # Шаг 3: Установка зависимостей
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+
+      # Шаг 4: Сборка и публикация (только для main)
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        run: mkdocs gh-deploy --force
