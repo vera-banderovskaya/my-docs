@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Мой проект документации</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Мой проект документации</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about/" class="nav-link">О проекте</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="about/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mkdocs" class="nav-link">Инструкция по созданию документации MkDocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="mkdocs">Инструкция по созданию документации MkDocs</h1>
+<h1 id="_1"></h1>
+<h2 style="color: black;">ШАГ 1. Установка MkDocs.</h2>
+
+<p><strong>Важно!:</strong> если ранее вы уже установили на свой компьютер MkDocs, то пропустите этот шаг.</p>
+<ol>
+<li>Откройте терминал (Linux/macOS) или PowerShell/CMD (Windows).</li>
+<li>Выполните команду <strong>pip install mkdocs</strong></li>
+</ol>
+<h2 style="color: black;">ШАГ 2. Создание проекта.</h2>
+
+<ol>
+<li>Создайте директорию, для этого введите команду <strong>mkdocs new my-docs</strong></li>
+<li>Перейдите в папку <strong>cd my-docs</strong></li>
+</ol>
+<p><strong>Важно!:</strong> на вашем локальном компьютере через терминал получилась структура папок:</p>
+<p><code>my-docs/
+  ├── docs/
+  │   └── index.md
+  └── mkdocs.yml</code></p>
+<h2 style="color: black;">ШАГ 3. Редактирование главной страницы.</h2>
+
+<p>Все файлы инструкции необходимо создавать в папке <strong>docs</strong>. Файл, относящийся к главной странице, называется <strong>index.md</strong>. Чтобы изменить содержимое файла:</p>
+<ol>
+<li>В терминале введите <strong>pwd</strong>, чтобы проверить где вы сейчас находитесь.</li>
+<li>Если вы находитесь в папке <strong>my-docs</strong>, то введите <strong>cd docs</strong></li>
+<li>Оказавшись в папке docs введите команду <strong>ls</strong>, чтобы проверить содержимое папки</li>
+<li>Проверьте, что есть папка <strong>index.md</strong></li>
+<li>Чтобы её отредактировать введите notepad <strong>index.md</strong></li>
+<li>Внесите необходимые правки и сохраните файл, нажав на кнопку Сохранить в самом файле.</li>
+<li>Для просмотра содержимого файла введите <strong>cat index.md</strong></li>
+</ol>
+<h2 style="color: black;">ШАГ 4. Запуск локального сервера.</h2>
+
+<p>Для того, чтобы увидеть справочник в web-версии на нашем локальном сервере, сначала перейдите в корневую папку директории нашего проекта:</p>
+<ol>
+<li>В терминале введите <strong>pwd</strong>, чтобы проверить где вы сейчас находитесь.</li>
+<li>Для перехода в папку выше введите <strong>cd ..</strong></li>
+<li>Ещё раз убедитесь, что вы находитесь в папке <strong>my-docs</strong> с помощью команды <strong>pwd</strong></li>
+<li>Для запуска сервера введите <strong>mkdocs serve</strong></li>
+<li>Для просмотра веб-версии <a href="http://127.0.0.1:8000">перейдите по ссылке http://127.0.0.1:8000</a></li>
+</ol>
+<p><strong>Важно:</strong> чтобы оставить работу просмотра веб-версии, в терминале зажмите комбинацию <strong>Ctrl+C</strong>. При каждом редактировании информация в веб-версии обновляется автоматически.</p>
+<h2 style="color: black;">ШАГ 5. Создание дополнительной страницы.</h2>
+
+<p>Сейчас в нашем проекте есть 1 страница, которая называется <strong>Инструкция по созданию документации MkDocs</strong>, но можно создать вторую под названием <strong>О проекте</strong>.</p>
+<ol>
+<li>В терминале введите <strong>pwd</strong>, чтобы проверить где вы сейчас находитесь.</li>
+<li>Перейдите в папку <strong>docs</strong>, введите <strong>cd docs</strong></li>
+<li>Создайте файл, для этого введите <strong>touch about.md</strong></li>
+<li>В этом файле введите необходимый текст и сохраните.</li>
+</ol>
+<p>Теперь необходимо открыть веб-версию и проверить наличие второй страницы.</p>
+<ol>
+<li>Перейдите в главную папку директории <strong>my-docs</strong></li>
+<li>Введите команду <strong>mkdocs serve</strong></li>
+<li>После завершения просмотра веб-версии справочника не забудьте в терминале зажать комбинацию <strong>Ctrl+C</strong></li>
+</ol>
+<h2 style="color: black;">ШАГ 6. Публикация на GitHub Pages.</h2>
+
+<p>Если у вас есть личный кабинет в GitHub и настроен SSH для вашего локального компьютера, то можно создать ссылку на <strong>GitHub Pages:</strong></p>
+<ol>
+<li>В терминале перейдите в корневую директорию вашего проекта, у нас это <strong>my-docs</strong>. Следующие действия связаны с созданием нового проекта в GitHub.</li>
+<li>Введите <strong>git init</strong></li>
+<li>Введите <strong>git add my-docs</strong></li>
+<li>Введите <strong>git commit -m "Первая версия"</strong></li>
+</ol>
+<p>Теперь необходимо установить связь с GitHub и залить уже созданный проект с нашего локального компьютера:</p>
+<ol>
+<li>Введите <strong>git remote add origin git@github.com:ваш_логин/my-docs.git</strong></li>
+<li>Введите <strong>git branch -M main</strong></li>
+<li>Введите <strong>git push -u origin main</strong></li>
+<li>Чтобы опубликовать ваш проект введите <strong>mkdocs gh-deploy</strong></li>
+</ol>
+<p><strong>Важно:</strong> создается ветка gh-pages. Сайт публикуется по адресу: <a href="https://ваш_логин.github.io/my-docs/">https://ваш_логин.github.io/my-docs/</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-05-30 14:03:19.968443+00:00
+-->
