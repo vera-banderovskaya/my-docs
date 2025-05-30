@@ -91,4 +91,4 @@
 1. Введите **mkdocs gh-deploy**
 2. Проверьте результат по ссылке. 
 
-Сайт публикуется по адресу: [https://ваш_логин.github.io/my-docs/](https://ваш_логин.github.io/my-docs/) Посмотреть пример можно по ссылке [https://vera-banderovskaya.github.io/my-docs/](https://vera-banderovskaya.github.io/my-docs/)
+Сайт публикуется по адресу https://ваш_логин.github.io/my-docs/ Посмотреть пример можно по ссылке [https://vera-banderovskaya.github.io/my-docs/](https://vera-banderovskaya.github.io/my-docs/)

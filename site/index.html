@@ -80,18 +80,12 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link"></a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
 <h1 id="mkdocs">Инструкция по созданию документации MkDocs</h1>
-<h1 id="_1"></h1>
 <h2 style="color: black;">ШАГ 1. Установка MkDocs.</h2>
 
 <p><strong>Важно!:</strong> если ранее вы уже установили на свой компьютер MkDocs, то пропустите этот шаг.</p>
@@ -116,7 +110,7 @@
 <ol>
 <li>В терминале введите <strong>pwd</strong>, чтобы проверить где вы сейчас находитесь.</li>
 <li>Если вы находитесь в папке <strong>my-docs</strong>, то введите <strong>cd docs</strong></li>
-<li>Оказавшись в папке docs введите команду <strong>ls</strong>, чтобы проверить содержимое папки</li>
+<li>Оказавшись в папке docs введите команду <strong>ls</strong>, чтобы проверить содержимое папки.</li>
 <li>Проверьте, что есть папка <strong>index.md</strong></li>
 <li>Чтобы её отредактировать введите notepad <strong>index.md</strong></li>
 <li>Внесите необходимые правки и сохраните файл, нажав на кнопку Сохранить в самом файле.</li>
@@ -150,21 +144,29 @@
 </ol>
 <h2 style="color: black;">ШАГ 6. Публикация на GitHub Pages.</h2>
 
-<p>Если у вас есть личный кабинет в GitHub и настроен SSH для вашего локального компьютера, то можно создать ссылку на <strong>GitHub Pages:</strong></p>
+<p>Если у вас есть личный кабинет на GitHub и настроен SSH для вашего локального компьютера, то следуйте действиям в данном шаге. В случае, если у вас нет личного кабинета, то сначала пропустите этот шаг.</p>
+<p>Теперь необходимо создать новый репозитории в вашем личном кабинете на GitHub:</p>
 <ol>
-<li>В терминале перейдите в корневую директорию вашего проекта, у нас это <strong>my-docs</strong>. Следующие действия связаны с созданием нового проекта в GitHub.</li>
-<li>Введите <strong>git init</strong></li>
-<li>Введите <strong>git add my-docs</strong></li>
-<li>Введите <strong>git commit -m "Первая версия"</strong></li>
+<li>Откройте раздел <strong>Your repositiries</strong></li>
+<li>Нажмите на кнопку <strong>New</strong></li>
+<li>Введите название <strong>my-docs</strong> </li>
+<li>Введите описание (по желанию) в блок <strong>Description</strong></li>
+<li>Выберите статус репозитория <strong>Public (публичный)</strong> или <strong>Privat(частный)</strong> в зависимости от цели проекта.</li>
+<li>Внизу страницы нажмите кнопку <strong>Create repository</strong></li>
 </ol>
-<p>Теперь необходимо установить связь с GitHub и залить уже созданный проект с нашего локального компьютера:</p>
+<p>В терминале необходимо продолжить настройку:</p>
 <ol>
-<li>Введите <strong>git remote add origin git@github.com:ваш_логин/my-docs.git</strong></li>
-<li>Введите <strong>git branch -M main</strong></li>
-<li>Введите <strong>git push -u origin main</strong></li>
-<li>Чтобы опубликовать ваш проект введите <strong>mkdocs gh-deploy</strong></li>
+<li>Перейдите в папку проекта <strong>cd my-docs</strong>.</li>
+<li>Инициализируйте Git и подключитесь к репозиторию через HTTPS (проще чем SSH): <strong>git init</strong>, после <strong>git remote add origin https://github.com/имя личного кабинета/my-docs.git</strong></li>
+<li>Добавьте файлы и сделайте коммит: <strong>git add .</strong>, после <strong>git commit -m "Первая версия документации"</strong></li>
+<li>Запушите изменения в GitHub: <strong>git push -u origin main</strong></li>
 </ol>
-<p><strong>Важно:</strong> создается ветка gh-pages. Сайт публикуется по адресу: <a href="https://ваш_логин.github.io/my-docs/">https://ваш_логин.github.io/my-docs/</a></p></div>
+<p>Теперь разворачиваем наш проект на GitHub Pages:</p>
+<ol>
+<li>Введите <strong>mkdocs gh-deploy</strong></li>
+<li>Проверьте результат по ссылке. </li>
+</ol>
+<p>Сайт публикуется по адресу: <a href="https://ваш_логин.github.io/my-docs/">https://ваш_логин.github.io/my-docs/</a> Посмотреть пример можно по ссылке <a href="https://vera-banderovskaya.github.io/my-docs/">https://vera-banderovskaya.github.io/my-docs/</a></p></div>
             </div>
         </div>
 
@@ -246,5 +248,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-05-30 14:03:19.968443+00:00
+Build Date UTC : 2025-05-30 14:58:25.191606+00:00
 -->
