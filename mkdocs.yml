@@ -1,5 +1,16 @@
-site_name: Мой проект документации
+site_name: Документация
 
 nav:
-  - Главная: index.md
+  - Главная: 
+      - index.md  # Страница со списком инструкций
+      - "Как создать документацию в MkDocs": instructions/mkdocs-guide.md
+      - "Основные команды Git": instructions/git-guide.md
   - О проекте: about.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs  # Отключаем вкладки в шапке (если они были)
+
+markdown_extensions:
+  - pymdownx.superfences
