@@ -12,21 +12,22 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
       min_search_length: 2
+      lang: ru  # ДОБАВЛЕНО для русского поиска
 
 theme:
   name: material
-  custom_dir: docs/overrides  # ПЕРЕМЕЩЕНО НА ПРАВИЛЬНОЕ МЕСТО
+  language: ru  # ДОБАВЛЕНО для русского интерфейса
   features:
-    - search.highlight  # Оставляем только подсветку результатов
-    # Для полного отключения ненужных функций лучше удалить строки, а не комментировать
+    - search.highlight
+  # УДАЛЕНО custom_dir: docs/overrides - эта строка больше не нужна
 
 markdown_extensions:
   - toc:
-      permalink: false  # Полностью отключаем якоря
+      permalink: false
   - pymdownx.superfences
 
 extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
-  - javascripts/search-i18n.js
+  - javascripts/search-i18n.js  # Оставляем только этот JavaScript

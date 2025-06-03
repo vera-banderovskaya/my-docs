@@ -47,3 +47,30 @@
         padding: 0.5rem 0.7rem !important;
     }
 }
+
+/* === ОБНОВЛЕННЫЙ РАЗДЕЛ ДЛЯ СТРОКИ ПОИСКА === */
+/* Сделать текст "Поиск" белым (без жирного) */
+.md-search__input::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Для поддержки в разных браузерах */
+.md-search__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white !important;
+}
+.md-search__input::-moz-placeholder { /* Firefox 19+ */
+  color: white !important;
+}
+.md-search__input:-ms-input-placeholder { /* IE 10+ */
+  color: white !important;
+}
+.md-search__input:-moz-placeholder { /* Firefox 18- */
+  color: white !important;
+}
+
+/* Гарантированное решение для новых версий MkDocs */
+[data-md-component="search-query"]::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}

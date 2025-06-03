@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://vera-banderovskaya.github.io/my-docs/instructions/mkdocs-guide/">
       
       
-        <link rel="prev" href="../../about/">
+        <link rel="prev" href="../..">
       
       
         <link rel="next" href="../git-guide/">
@@ -217,28 +217,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    О проекте
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -252,10 +230,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -268,8 +246,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Инструкции
           </label>
@@ -338,6 +316,28 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    О проекте
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -375,7 +375,7 @@
 <h1 id="mkdocs">Как создать документацию в MkDocs?</h1>
 <h2 style="color: black;">ШАГ 1. Установка MkDocs.</h2>
 
-<p><strong>Важно!:</strong> если ранее вы уже установили на свой компьютер MkDocs, то пропустите этот шаг.</p>
+<p><strong>Важно:</strong> если ранее вы уже установили на свой компьютер MkDocs, то пропустите этот шаг.</p>
 <ol>
 <li>Откройте терминал (Linux/macOS) или PowerShell/CMD (Windows).</li>
 <li>Выполните команду <strong>pip install mkdocs</strong></li>
@@ -386,11 +386,6 @@
 <li>Создайте директорию, для этого введите команду <strong>mkdocs new my-docs</strong></li>
 <li>Перейдите в папку <strong>cd my-docs</strong></li>
 </ol>
-<p><strong>Важно!:</strong> на вашем локальном компьютере через терминал получилась структура папок:</p>
-<p><code>my-docs/
-  ├── docs/
-  │   └── index.md
-  └── mkdocs.yml</code></p>
 <h2 style="color: black;">ШАГ 3. Редактирование главной страницы.</h2>
 
 <p>Все файлы инструкции необходимо создавать в папке <strong>docs</strong>. Файл, относящийся к главной странице, называется <strong>index.md</strong>. Чтобы изменить содержимое файла:</p>
@@ -411,7 +406,7 @@
 <li>Для перехода в папку выше введите <strong>cd ..</strong></li>
 <li>Ещё раз убедитесь, что вы находитесь в папке <strong>my-docs</strong> с помощью команды <strong>pwd</strong></li>
 <li>Для запуска сервера введите <strong>mkdocs serve</strong></li>
-<li>Для просмотра веб-версии <a href="http://127.0.0.1:8000">перейдите по ссылке http://127.0.0.1:8000</a></li>
+<li>Для просмотра веб-версии перейдите по ссылке <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></li>
 </ol>
 <p><strong>Важно:</strong> чтобы оставить работу просмотра веб-версии, в терминале зажмите комбинацию <strong>Ctrl+C</strong>. При каждом редактировании информация в веб-версии обновляется автоматически.</p>
 <h2 style="color: black;">ШАГ 5. Создание дополнительной страницы.</h2>
@@ -453,7 +448,7 @@
 <li>Введите <strong>mkdocs gh-deploy</strong></li>
 <li>Проверьте результат по ссылке. </li>
 </ol>
-<p>Сайт публикуется по адресу https://ваш_логин.github.io/my-docs/</p>
+<p>Сайт публикуется по адресу <strong>https://ваш_логин.github.io/my-docs/</strong></p>
 <p>Посмотреть пример можно по ссылке <a href="https://vera-banderovskaya.github.io/my-docs/">https://vera-banderovskaya.github.io/my-docs/</a></p>
 
 
@@ -506,8 +501,20 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
+        <script src="../../javascripts/search-i18n.js"></script>
+      
     
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.querySelector("input[type=search]");
+      if (searchInput) {
+        searchInput.placeholder = "Поиск...";
+      }
+    });
+  </script>
+
   </body>
 </html>

@@ -1,27 +1,49 @@
+/* ===== Базовые настройки ===== */
 /* Скрываем заголовок сайта в боковой панели */
-.md-nav--primary .md-nav__title {
-    display: none;
+.md-nav--primary > .md-nav__title {
+    display: none !important;
 }
 
-/* Делаем "Главную" первым пунктом */
-.md-nav--primary .md-nav__list {
-    padding-top: 0;
-}
-
-/* Дополнительно: убираем отступ у первого элемента */
-.md-nav--primary .md-nav__list > li:first-child {
-    margin-top: 0;
-}
-
-/* Убираем иконку якоря в навигации */
+/* Убираем иконку якоря во всей навигации */
 .md-nav__link:after {
     display: none !important;
 }
 
 /* Убираем всплывающую подсказку */
-.md-nav__link[href] {
-    cursor: default;
-}
 .md-nav__link[href]:hover::after {
     content: none !important;
+}
+
+/* ===== Настройки навигации ===== */
+/* Основной список навигации */
+.md-nav--primary .md-nav__list {
+    padding-top: 0;
+}
+
+/* Первый элемент без отступа */
+.md-nav--primary .md-nav__list > li:first-child {
+    margin-top: 0;
+}
+
+/* Размер шрифта для пунктов меню - УМЕНЬШЕН В 2 РАЗА */
+.md-nav--primary .md-nav__item .md-nav__link {
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0.6rem !important;
+    margin: 0.2rem 0 !important;
+    transition: all 0.3s ease;
+}
+
+/* Активный пункт меню */
+.md-nav--primary .md-nav__link--active {
+    font-weight: bold !important;
+    color: var(--md-primary-fg-color) !important;
+    background: rgba(0,0,0,0.05);
+}
+
+/* ===== Адаптивность ===== */
+@media screen and (max-width: 76.1875em) {
+    .md-nav--primary .md-nav__item .md-nav__link {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.7rem !important;
+    }
 }
