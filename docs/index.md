@@ -1,4 +1,4 @@
-# Инструкция по созданию документации MkDocs
+# Как создать документацию в MkDocs?
 
 
 <h2 style="color: black;">ШАГ 1. Установка MkDocs.</h2>
@@ -91,4 +91,6 @@
 1. Введите **mkdocs gh-deploy**
 2. Проверьте результат по ссылке. 
 
-Сайт публикуется по адресу https://ваш_логин.github.io/my-docs/ Посмотреть пример можно по ссылке [https://vera-banderovskaya.github.io/my-docs/](https://vera-banderovskaya.github.io/my-docs/)
+Сайт публикуется по адресу https://ваш_логин.github.io/my-docs/
+
+Посмотреть пример можно по ссылке [https://vera-banderovskaya.github.io/my-docs/](https://vera-banderovskaya.github.io/my-docs/)
