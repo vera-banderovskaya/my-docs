@@ -12,16 +12,3 @@
 .md-nav--primary .md-nav__list > li:first-child {
     margin-top: 0;
 }
-
-/* Убираем иконку якоря в навигации */
-.md-nav__link:after {
-    display: none !important;
-}
-
-/* Убираем всплывающую подсказку */
-.md-nav__link[href] {
-    cursor: default;
-}
-.md-nav__link[href]:hover::after {
-    content: none !important;
-}

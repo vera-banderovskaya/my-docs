@@ -23,7 +23,7 @@ theme:
 
 markdown_extensions:
   - toc:
-      permalink: true
+      permalink: false  # Полностью отключаем якоря
   - pymdownx.superfences
 
 extra_css:
