@@ -16,11 +16,15 @@ plugins:
 theme:
   name: material
   features:
-    - search.highlight
-    - search.suggest
-    - search.share
+    # Убираем ненужные функции поиска
+    - search.highlight  # Оставляем только подсветку результатов
+    # - search.suggest  # Убираем "паутину"
+    # - search.share    # Убираем кнопку "поделиться"
 
 markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css

@@ -1,0 +1,14 @@
+/* Скрываем заголовок сайта в боковой панели */
+.md-nav--primary .md-nav__title {
+    display: none;
+}
+
+/* Делаем "Главную" первым пунктом */
+.md-nav--primary .md-nav__list {
+    padding-top: 0;
+}
+
+/* Дополнительно: убираем отступ у первого элемента */
+.md-nav--primary .md-nav__list > li:first-child {
+    margin-top: 0;
+}
