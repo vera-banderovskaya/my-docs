@@ -3,10 +3,10 @@ site_url: https://vera-banderovskaya.github.io/my-docs/
 
 nav:
   - Главная: index.md
-  - О проекте: about.md
   - Инструкции:
     - "MkDocs": instructions/mkdocs-guide.md
     - "Git": instructions/git-guide.md
+  - О проекте: about.md
 
 plugins:
   - search:
@@ -15,11 +15,10 @@ plugins:
 
 theme:
   name: material
+  custom_dir: docs/overrides  # ПЕРЕМЕЩЕНО НА ПРАВИЛЬНОЕ МЕСТО
   features:
-    # Убираем ненужные функции поиска
     - search.highlight  # Оставляем только подсветку результатов
-    # - search.suggest  # Убираем "паутину"
-    # - search.share    # Убираем кнопку "поделиться"
+    # Для полного отключения ненужных функций лучше удалить строки, а не комментировать
 
 markdown_extensions:
   - toc:
@@ -28,3 +27,6 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/search-i18n.js
