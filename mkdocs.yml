@@ -1,16 +1,26 @@
 site_name: Документация
+site_url: https://vera-banderovskaya.github.io/my-docs/
 
 nav:
-  - Главная: 
-      - index.md  # Страница со списком инструкций
-      - "Как создать документацию в MkDocs": instructions/mkdocs-guide.md
-      - "Основные команды Git": instructions/git-guide.md
+  - Главная: index.md
   - О проекте: about.md
+  - Инструкции:
+    - "MkDocs": instructions/mkdocs-guide.md
+    - "Git": instructions/git-guide.md
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      min_search_length: 2
 
 theme:
   name: material
   features:
-    - navigation.tabs  # Отключаем вкладки в шапке (если они были)
+    - search.highlight
+    - search.suggest
+    - search.share
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.superfences
