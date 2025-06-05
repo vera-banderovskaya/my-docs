@@ -1,0 +1,28 @@
+name: Deploy Documentation
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: write  # Необходимо для gh-deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          
+      - name: Install dependencies
+        run: pip install mkdocs mkdocs-material
+        
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        run: mkdocs gh-deploy --force
