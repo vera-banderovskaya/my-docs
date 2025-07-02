@@ -5,6 +5,7 @@ nav:
   - Главная: index.md
   - Инструкции:
     - "MkDocs": instructions/mkdocs-guide.md
+    - "Docker": instructions/docker.md
     - "Git": instructions/git-guide.md
   - О проекте: about.md
 
