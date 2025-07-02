@@ -1,0 +1,76 @@
+/* ===== Базовые настройки ===== */
+/* Скрываем заголовок сайта в боковой панели */
+.md-nav--primary > .md-nav__title {
+    display: none !important;
+}
+
+/* Убираем иконку якоря во всей навигации */
+.md-nav__link:after {
+    display: none !important;
+}
+
+/* Убираем всплывающую подсказку */
+.md-nav__link[href]:hover::after {
+    content: none !important;
+}
+
+/* ===== Настройки навигации ===== */
+/* Основной список навигации */
+.md-nav--primary .md-nav__list {
+    padding-top: 0;
+}
+
+/* Первый элемент без отступа */
+.md-nav--primary .md-nav__list > li:first-child {
+    margin-top: 0;
+}
+
+/* Размер шрифта для пунктов меню - УМЕНЬШЕН В 2 РАЗА */
+.md-nav--primary .md-nav__item .md-nav__link {
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0.6rem !important;
+    margin: 0.2rem 0 !important;
+    transition: all 0.3s ease;
+}
+
+/* Активный пункт меню */
+.md-nav--primary .md-nav__link--active {
+    font-weight: bold !important;
+    color: var(--md-primary-fg-color) !important;
+    background: rgba(0,0,0,0.05);
+}
+
+/* ===== Адаптивность ===== */
+@media screen and (max-width: 76.1875em) {
+    .md-nav--primary .md-nav__item .md-nav__link {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.7rem !important;
+    }
+}
+
+/* === ОБНОВЛЕННЫЙ РАЗДЕЛ ДЛЯ СТРОКИ ПОИСКА === */
+/* Сделать текст "Поиск" белым (без жирного) */
+.md-search__input::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Для поддержки в разных браузерах */
+.md-search__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white !important;
+}
+.md-search__input::-moz-placeholder { /* Firefox 19+ */
+  color: white !important;
+}
+.md-search__input:-ms-input-placeholder { /* IE 10+ */
+  color: white !important;
+}
+.md-search__input:-moz-placeholder { /* Firefox 18- */
+  color: white !important;
+}
+
+/* Гарантированное решение для новых версий MkDocs */
+[data-md-component="search-query"]::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
