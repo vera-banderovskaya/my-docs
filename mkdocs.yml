@@ -11,23 +11,30 @@ nav:
 plugins:
   - search:
       separator: '[\s\-\.]+'
-      min_search_length: 2
-      lang: ru  # ДОБАВЛЕНО для русского поиска
+      # min_search_length: 2  # УДАЛЕНО (устаревшая опция в новых версиях Material)
+      lang: ru
+      # Новые рекомендуемые параметры для поиска:
+      prebuild_index: true
+      indexing: 'full'
 
 theme:
   name: material
-  language: ru  # ДОБАВЛЕНО для русского интерфейса
+  language: ru
   features:
     - search.highlight
-  # УДАЛЕНО custom_dir: docs/overrides - эта строка больше не нужна
+    - search.suggest
+    - search.share
 
 markdown_extensions:
   - toc:
       permalink: false
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - attr_list  # Для расширенной работы с атрибутами
 
 extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
-  - javascripts/search-i18n.js  # Оставляем только этот JavaScript
+  - javascripts/search-i18n.js
